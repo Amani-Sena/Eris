@@ -1,0 +1,17 @@
+#section-edit-budget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    gap: 2rem;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+}

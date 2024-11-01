@@ -1,0 +1,17 @@
+#section-budget-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.table-budget-list th, .table-budget-list td {
+  border-bottom: 1px solid var(--gray);
+  padding: 1.6rem 1.8rem 1.6rem 1.8rem;
+}
+.table-budget-list i {
+  font-size: 1.2rem;
+  color: var(--orange);
+}/*# sourceMappingURL=budget.css.map */

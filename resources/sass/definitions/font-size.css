@@ -1,0 +1,65 @@
+h1, h2 {
+  font-family: "InterBold" !important;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+h3, h4, h5, h6 {
+  font-family: "InterLight" !important;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+li {
+  font-family: "InterRegular";
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 3.1rem;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+  h3 {
+    font-size: 2.1rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+  h5 {
+    font-size: 1.1;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=font-size.css.map */

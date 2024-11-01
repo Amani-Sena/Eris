@@ -1,0 +1,14 @@
+.btn-default {
+  background-color: var(--orange);
+  padding: 1rem 2rem 1rem 2rem;
+  color: var(--white);
+  transition: 0.3s;
+  border: 1px solid var(--orange);
+  border-radius: 1.4rem;
+}
+
+.btn-default:hover {
+  background-color: transparent;
+  border: 1px solid var(--ciano);
+  color: var(--ciano);
+}

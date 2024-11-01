@@ -1,0 +1,17 @@
+.swiper {
+  width: 100%;
+  height: 90vh;
+}
+
+.swiper-2 {
+  width: 100%;
+  height: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=swiper.css.map */

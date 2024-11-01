@@ -1,0 +1,62 @@
+body::-webkit-scrollbar {
+    width: 0px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--black);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, var(--pink), var(--purple));    /* color of the scroll thumb */
+    border-radius: 10px;       /* roundness of the scroll thumb */
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "InterLight" !important;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--grayLight);
+}
+
+button {
+    font-family: 'InterLight', sans-serif;
+    cursor: pointer;  
+}
+
+svg {
+    width: 100%;
+    object-fit: cover;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pink {
+    color: var(--pink);
+}
+
+.show-flex {
+    display: flex !important;
+}
+
+.div-line {
+    background-color: var(--grayLight);
+    width: 100%;
+    height: 1px;
+}
