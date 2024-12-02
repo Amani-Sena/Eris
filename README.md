@@ -1,66 +1,153 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Eris
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Eris é um site desenvolvido para simplificar o processo de agendamento de visitas de profissionais especializados, oferecendo um sistema completo para cadastro e agendamentos. O objetivo é facilitar e desburocratizar a interação entre clientes e profissionais da área elétrica.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Visão Geral do Projeto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Nome do Projeto:** Eris
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Descrição:** Uma plataforma que visa facilitar o agendamento de visitas de profissionais à casa dos clientes, com um sistema completo de cadastro e agendamento para usuários, fornecendo orçamentos de forma simplificada.
 
-## Learning Laravel
+**Objetivo:** Desburocratizar e facilitar orçamentos diretos entre clientes e profissionais da área elétrica.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Tecnologias Utilizadas:**
+- **Frontend:** HTML, SCSS, Vue.js
+- **Backend:** Laravel
+- **Banco de Dados:** MySQL
+- **Autenticação:** Sessão em Cookies
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Guia de Instalação e Configuração
 
-## Laravel Sponsors
+### Requisitos
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Node.js** >= 14.x
+- **PHP** >= 8.0
+- **MySQL** >= 8.0
+- **Vue.js** >= 3.2
+- **Laravel** >= 11
 
-### Premium Partners
+### Passo a Passo de Instalação
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. **Download dos Arquivos:** Baixe os arquivos compactados da aplicação (.zip) e extraia-os para uma pasta de sua preferência.
+2. **Instalar Dependências do Backend e Frontend:**
+   - No diretório do projeto, execute:
+     ```bash
+     composer install
+     ```
+   - Para instalar as dependências do frontend, execute:
+     ```bash
+     npm install
+     ```
+3. **Configuração do Banco de Dados e Variáveis de Ambiente:**
+   - Crie um arquivo `.env` na raiz do projeto (caso ainda não exista) e configure as variáveis:
+     ```env
+     DB_CONNECTION=mysql
+     DB_HOST=127.0.0.1
+     DB_PORT=3306
+     DB_DATABASE=nome_do_banco
+     DB_USERNAME=seu_usuario
+     DB_PASSWORD=sua_senha
+     ```
+   - Altere outros parâmetros, como `APP_NAME` e `APP_ENV`, conforme necessário.
+4. **Migrar e Popular o Banco de Dados:**
+   - Com o `.env` configurado, execute:
+     ```bash
+     php artisan migrate --seed
+     ```
+5. **Iniciar a Aplicação:**
+   - Para iniciar o servidor backend, use:
+     ```bash
+     php artisan serve
+     ```
+   - Para o frontend, use:
+     ```bash
+     npm run dev
+     ```
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Estrutura do Código
 
-## Code of Conduct
+### Estrutura de Pastas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **app/**: Lógica do backend (Controllers, Models, Mails, Notifications, Providers)
+- **resources/views/**: Arquivos de visualização `.Blade` para páginas backend
+- **resources/js/components**: Componentes Vue.js, com views Blade redirecionando para eles
+- **public/**: Arquivos públicos do projeto, incluindo imagens, fontes, regras no `.htaccess` e `index.php`
+- **routes/**: Definições de rotas da API e web
 
-## Security Vulnerabilities
+### Principais Módulos e Funcionalidades
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Cadastro de Usuários:** Criação de contas e redefinição de senhas
+- **Gerenciamento de Agendamentos:** Criação, edição e exclusão de agendamentos
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Guia de Uso
+
+### Funções Principais
+
+- **Agendamentos:** Exibição de todos os agendamentos ativos do usuário
+- **Criação de Conta:** Criação de um novo usuário com verificação de email
+
+### Fluxo de Usuário
+
+1. O usuário faz login ou se registra.
+2. Se registrado, verifica o email.
+3. Cria um agendamento fornecendo dados como telefone, endereço, data, horário e CEP.
+4. Pode editar ou excluir o agendamento.
+5. Monitora seus agendamentos na página dedicada.
+6. Recebe notificações por email sobre atualizações.
+
+---
+
+## Estrutura da Aplicação
+
+### Comunicação Frontend e Backend
+
+- **Frontend (Vue.js):** Responsável pela experiência do usuário e renderização de páginas.
+- **Backend (Laravel):** Gerencia a lógica de negócios, banco de dados e processamento de requisições.
+
+### Estrutura de Rotas
+
+- **GET /**: Página de início
+- **GET /about**: Informações sobre a empresa
+- **GET /budget**: Visualizar agendamentos
+- **GET /budget/create**: Formulário de agendamento
+- **DELETE /budget/destroy/{id}**: Excluir agendamento
+- **GET /budget/edit/{id}**: Editar agendamento
+- **GET /budget/show/{id}**: Visualizar agendamento único
+- **POST /budget/store**: Armazenar agendamento
+- **POST /budget/update{id}**: Atualizar agendamento
+- **POST /email/resend**: Reenvio de email de verificação
+- **GET /email/verify**: Verificação de email
+- **GET /email/verify/{id}/{hash}**: Confirmar email
+- **GET /login**: Página de login
+- **POST /login**: Validar login
+- **POST /logout**: Logout do usuário
+- **GET /password/reset**: Redefinição de senha
+- **POST /password/reset**: Enviar email de redefinição
+- **GET /password/reset/{token}**: Definir nova senha
+- **GET /questions**: Perguntas frequentes
+- **GET /register**: Formulário de registro
+
+---
+
+## Banco de Dados
+
+### Modelo ER
+
+- **Tabelas Principais:** `users`, `budgets`
+
+### Descrição das Tabelas
+
+- **users:** Informações de cada usuário
+- **budgets:** Informações sobre os agendamentos
+
+---
+
+**Projeto em andamento :)**
