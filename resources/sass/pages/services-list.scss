@@ -1,0 +1,153 @@
+#section-service-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 8rem;
+}
+
+.service-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    min-width: 70rem;
+}
+
+.service-list-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    h2 {
+        color: var(--orange);
+        text-align: left;
+    }
+
+    p {
+        color: var(--gray);
+        max-width: 36rem;
+        text-align: left;
+    }
+}
+
+.service-list-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.service-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--grayLight);
+}
+
+.service-list-item-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    img {
+        width: 14rem;
+        height: 8rem;
+        border-radius: 1.4rem;
+    }
+
+    h3 {
+        color: var(--orange);
+        font-family: 'InterBold' !important;
+    }
+}
+
+.service-list-item-desc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    p {
+        max-width: 30rem;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    #section-service-list {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service-list-container {
+        width: 100%;
+        min-width: 0rem;
+    }
+
+    .service-list-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    
+        h2 {
+            text-align: center;
+        }
+    
+        p {
+            max-width: 18rem;
+            text-align: center;
+        }
+    }
+
+    .service-list-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .service-list-item {
+        width: 100%;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .service-list-item-title {
+        gap: 1rem;
+
+        img {
+            width: 8rem;
+            height: 6rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+    }
+
+    .service-list-item-desc {
+    
+        p {
+            display: none;
+        }
+    }
+}

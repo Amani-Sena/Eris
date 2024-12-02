@@ -1,10 +1,9 @@
 <template>
     <section id="section-verify">
-      <div class="container-verify">
-        <h3>Verifique seu endereço de e-mail</h3>
-        <p v-if="resent">Um novo link de verificação foi enviado para seu e-mail.</p>
-        <p>Antes de continuar, verifique seu e-mail em busca do link de verificação.</p>
-        <p>Se você não recebeu o e-mail,</p>
+      <div class="verify-container" data-aos="fade-down" data-aos-duration="1000">
+        <h3>Verifique seu e-mail</h3>
+        <p v-if="resent" id="verify-message">Um novo link de verificação foi enviado para seu e-mail.</p>
+        <p>Verifique seu e-mail em busca do link de confirmação</p>
         <form @submit.prevent="resendVerification">
           <input type="hidden" name="_token" :value="csrf_token">
           <button type="submit" class="btn-default">Solicitar email</button>.
@@ -12,6 +11,10 @@
       </div>
     </section>
   </template>
+
+<style lang="scss">
+@import "/resources/sass/pages/verify.scss";
+</style>
   
   <script>
   import axios from 'axios';

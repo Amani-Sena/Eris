@@ -1,0 +1,52 @@
+.hero {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+}
+.hero-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.hero-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  z-index: 1;
+  max-width: 50rem;
+  text-align: center;
+}
+.hero-info h1 {
+  color: var(--orange);
+  text-align: center;
+}
+.hero-info p {
+  color: var(--white);
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.hero-info a {
+  display: inline-block;
+  margin-top: 1.6rem;
+}
+
+@media screen and (max-width: 900px) {
+  .hero-info h1 {
+    color: var(--orange);
+  }
+  .hero-info p {
+    color: var(--white);
+  }
+}/*# sourceMappingURL=hero.css.map */

@@ -1,0 +1,15 @@
+#section-access-denied {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    gap: 1.6rem;
+
+    h1 {
+        color: var(--orange);
+        margin-bottom: 0rem;
+    }
+}

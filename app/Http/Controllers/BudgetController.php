@@ -25,6 +25,13 @@ class BudgetController extends Controller
         return view('budget.index', ['budgets' => $budgets]);
     }
 
+    public function budgetAdmin() {
+        $budgets = Budget::all();
+        $budgets = Budget::with('user:id,name')->get();
+
+        return view('admin.budget-admin', ['budgets' => $budgets]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -39,10 +46,12 @@ class BudgetController extends Controller
     public function store(Request $request) {
         $data = $request->all();
         $data['user_id'] = auth()->user()->id;
+        $data['status'] = "Pendente";
         $budget = Budget::create($data);
+
         $destinatario = auth()->user()->email;
         Mail::to($destinatario)->send(new NewBudgetMail($budget));
-        return redirect()->route('budget.show', ['budget' => $budget->id]);
+        return redirect()->route('budget')->with('message', 'Agendamento concluido!');
     }
 
     /**
@@ -57,13 +66,24 @@ class BudgetController extends Controller
      */
     public function edit(Budget $budget) {
         $user_id = auth()->user()->id;
+        $admin = auth()->user()->is_admin;
         
-        if($budget->user_id == $user_id) {
+        if($budget->user_id == $user_id || $admin) {
             return view('budget.edit', ['budget' => $budget]);
         } else {
             return view('access-denied');
-        }
+        }   
+    }
+
+    public function budgetEditAdmin(Budget $budget) {
+        $user_id = auth()->user()->id;
+        $admin = auth()->user()->is_admin;
         
+        if($budget->user_id == $user_id || $admin) {
+            return view('admin.budget-edit-admin', ['budget' => $budget]);
+        } else {
+            return view('access-denied');
+        }   
     }
 
     /**
@@ -71,10 +91,11 @@ class BudgetController extends Controller
      */
     public function update(Request $request, Budget $budget) {
         $user_id = auth()->user()->id;
+        $admin = auth()->user()->is_admin;
 
-        if($budget->user_id == $user_id) {
+        if($budget->user_id == $user_id || $admin) {
             $budget->update($request->all());
-            return redirect()->route('budget.show', ['budget' => $budget->id]);
+            return redirect()->route('budget', ['budget' => $budget->id])->with('message', 'Agendamento atualizado!');
         } else {
             return view('access-denied');
         }

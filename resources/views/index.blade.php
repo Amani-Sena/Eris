@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
 
     <!-- CSRF Token -->
@@ -20,21 +21,23 @@
 <body>
     <div id="app">
         @guest
-            <nav-component :guest="{{ json_encode(Auth::guest()) }}"></nav-component>
+            <navtransparent-component :guest="{{ json_encode(Auth::guest()) }}"></navtransparent-component>
         @endguest
 
         @auth
-            <nav-component :guest="{{ json_encode(Auth::guest()) }}" user_name="{{ Auth::user()->name }}" csrf_token="{{ @csrf_token() }}"></nav-component>
+            <navtransparent-component :guest="{{ json_encode(Auth::guest()) }}" user_name="{{ Auth::user()->name }}" admin="{{ Auth::user()->is_admin }}" csrf_token="{{ @csrf_token() }}"></navtransparent-component>
         @endauth
         
         <main>
             <hero-component></hero-component>
             <service-component></service-component>
             <brand-component></brand-component>
+            <serviceslist-component></serviceslist-component>
+            <support-component></support-component>
             <book-component csrf_token="{{ @csrf_token() }}"></book-component>
         </main>
 
-        @include('partials.footer')
+        <footer-component></footer-component>
     </div>
 </body>
 

@@ -1,0 +1,32 @@
+#section-reset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.reset-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid var(--grayLight);
+    border-radius: 1.8rem;
+    padding: 3rem 3rem;
+
+    h3 {
+        color: var(--orange);
+        font-family: 'InterBold' !important;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+}

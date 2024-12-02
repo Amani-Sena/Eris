@@ -13,13 +13,16 @@ export default defineConfig({
         }),
         vue({
             template: {
-                transformAssetUrls: {
-                    base: null,
-                    includeAbsolute: false,
-                },
+                transformAssetUrls: true,
             },
         }),
     ],
+
+    build: {
+        outDir: 'public/build',
+        emptyOutDir: true,
+    },
+
     resolve: {
         alias: {
             vue: 'vue/dist/vue.esm-bundler.js',

@@ -4,46 +4,78 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 12rem;
+    min-height: 100vh;
 }
 
-.container-login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem;
-    border-radius: 1rem;
-    background-color: var(--white);
-    min-width: 22rem;
-    margin-bottom: 6rem;
-}
-
-.form {
+.login-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1rem;
-    width: 100%;
+}
 
-    input {
-        background-color: transparent;
-        border: 1px solid var(--grayLight);
-        padding: 1rem 0 1rem 0.8rem;
-        border-radius: 1rem;
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--grayLight);
+    border-radius: 1.8rem;
+    padding: 3rem 3rem;
+    gap: 2rem;
+
+    h3 {
+        text-align: center;
+        color: var(--orange);
+        font-family: 'InterBold' !important;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
         width: 100%;
-        transition: 0.3s;
+
+        p, a {
+            font-size: 1rem;
+        }
+
+        p {
+            color: var(--gray);
+        }
+
+        a {
+            color: var(--orange);
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: var(--ciano);
+        }
     }
 }
 
-.container-checkbox-login {
+.login-remember-forgot {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    gap: 0.4rem;
+}
+
+.login-remember {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
 
     input[type="checkbox"] {
         display: none;
@@ -51,34 +83,41 @@
 
     label {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        cursor: pointer;
+        justify-content: center;
         gap: 0.4rem;
+        cursor: pointer;
     }
 }
 
-.custom-checkbox {
-        width: 1.2rem; 
-        height: 1.2rem; 
-        border-radius: 0.4rem;
-        border: 1px solid var(--grayLight); 
-        background-color: transparent;
-        position: relative;
+.login-checkbox {
+    padding: 0.6rem;
+    background-color: var(--grayLight);
+    border-radius: 0.3rem;
+    transition: 0.3s;
 }
 
-input[type="checkbox"]:checked + .custom-checkbox {
+input[type="checkbox"]:checked + label .login-checkbox {
     background-color: var(--orange);
-    border: 1px solid var(--orange);
 }
 
-input[type="checkbox"]:checked + .custom-checkbox:after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 6px;
-    width: 6px;
-    height: 9px;
-    border: solid var(--white); 
-    border-width: 0 2px 2px 0; 
-    transform: rotate(45deg); 
+.login-forgot {
+    a {
+        color: var(--orange);
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        color: var(--ciano);
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .login-container {
+        border: 0px solid var(--grayLight);
+    }
+
 }

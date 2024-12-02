@@ -1,0 +1,30 @@
+#section-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--grayLight);
+  border-radius: 1.8rem;
+  padding: 3rem 3rem;
+  gap: 1rem;
+}
+.email-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.email-container h3 {
+  color: var(--orange);
+  font-family: "InterBold" !important;
+}/*# sourceMappingURL=email.css.map */

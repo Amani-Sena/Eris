@@ -2,9 +2,12 @@
   --swiper-theme-color: #3CBBB1 !important;
   --orange: #EE6300;
   --black: #323232;
+  --blackOp: #32323269;
   --gray: #4C5B61;
   --ciano: #3CBBB1;
-  --white: #f0f0f0;
-  --grayLight: #e0e0e0;
+  --white: #F2F2F2;
+  --whiteF: #ffffff;
+  --grayLight: #D2D2D2;
+  --red: #c40000;
   transition: 0.4s;
 }/*# sourceMappingURL=colors.css.map */

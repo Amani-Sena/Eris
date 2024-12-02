@@ -29,7 +29,12 @@ class HomeController extends Controller
         return view('about');
     }
 
-    public function questions() {
-        return view('questions');
+    public function service($type) {
+        return view('service-details', ['type' => $type]);
+    }
+
+
+    public function test(Request $request) {
+        
     }
 }

@@ -1,7 +1,12 @@
 .input-default {
     padding: 1rem 1rem 1rem 1rem;
-    background-color: var(--white);
-    border: none;
-    border-radius: 1.6rem;
+    background-color: transparent;
+    color: var(--gray);
+    border: 1px solid var(--grayLight);
+    border-radius: 3rem;
     width: 100%;
+}
+
+.input-default:focus, .input-default:valid {
+    border: 1px solid var(--gray);
 }

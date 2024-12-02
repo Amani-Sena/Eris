@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<reset-component csrf_token="{{ @csrf_token() }}" email={{ $email ?? old('email') }} token={{ $token }}></reset-component>
+
 <!--<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -62,34 +64,4 @@
         </div>
     </div>
 </div>-->
-
-<section id="section-login">
-    <div class="container-login">
-        <h3>Redefinir Senha</h3>
-        <form method="POST" action="{{ route('password.update') }}" class="form">
-            @csrf
-            <input type="hidden" name="token" value="{{ $token }}">
-
-            <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" placeholder="Email" required autocomplete="email" autofocus disabled>
-            @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-
-            <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" placeholder="Senha" required autocomplete="new-password">
-
-            @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-
-            <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirmar Senha" required autocomplete="new-password">
-            
-            <button type="submit" class="btn-default">Enviar link de redefinição</button>
-            
-        </form>
-    </div>
-</section>
 @endsection

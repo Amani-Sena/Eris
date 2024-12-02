@@ -1,0 +1,98 @@
+#section-budget {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: 100vh;
+    border-top: 2px solid var(--orange);
+}
+
+.budget-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.budget-container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-image: url("/public/img/bg-hero-4.jpg");
+}
+
+.budget-container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 6rem;
+    gap: 2rem;
+    width: 50%;
+    height: 100%;
+    background-color: var(--white);
+
+    h1 {
+        color: var(--orange);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+}
+
+.budget-form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    #section-budget {
+        min-height: 100vh;
+        padding-top: 10rem;
+        padding-bottom: 4rem;
+    }
+
+    .budget-container-text {
+        display: none;
+    }
+
+    .budget-container-form {
+        align-items: center;
+        padding-left: 0rem;
+        width: 90%;
+    
+        h1 {
+            text-align: center;
+        }
+    
+        form {
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+    .budget-form-row {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,51 @@
+#section-benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.benefits-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    justify-content: center;
+    gap: 2.6rem;
+
+    h1 {
+        color: var(--orange);
+        text-align: left;
+    }
+}
+
+.benefits-container-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 8rem;
+
+    h3 {
+        font-family: 'InterBold' !important;
+        color: var(--ciano);
+    }
+
+    p {
+        max-width: 36rem;
+    }
+
+    b {
+        font-family: 'InterBold' !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .benefits-container-items {
+        gap: 4rem;
+    }
+}

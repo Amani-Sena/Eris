@@ -1,0 +1,40 @@
+.section-model {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: var(--blackOp);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.model-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 1.8rem;
+    padding: 3rem 3rem;
+    gap: 0.4rem;
+
+    h3 {
+        color: var(--orange);
+        font-family: 'InterBold' !important;
+        text-align: center;
+    }
+}
+
+.model-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}

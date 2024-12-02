@@ -1,0 +1,123 @@
+#section-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.register-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--grayLight);
+    border-radius: 1.8rem;
+    padding: 3rem 3rem;
+    gap: 2rem;
+
+    h3 {
+        text-align: center;
+        color: var(--orange);
+        font-family: 'InterBold' !important;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+
+        p, a {
+            font-size: 1rem;
+        }
+
+        p {
+            color: var(--gray);
+        }
+
+        a {
+            color: var(--orange);
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: var(--ciano);
+        }
+    }
+}
+
+.register-remember-forgot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.register-remember {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        cursor: pointer;
+    }
+}
+
+.register-checkbox {
+    padding: 0.6rem;
+    background-color: var(--grayLight);
+    border-radius: 0.3rem;
+    transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + label .register-checkbox {
+    background-color: var(--orange);
+}
+
+.register-forgot {
+    a {
+        color: var(--orange);
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        color: var(--ciano);
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .register-container {
+        border: 0px solid var(--grayLight);
+    }
+
+}

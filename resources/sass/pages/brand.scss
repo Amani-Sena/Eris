@@ -1,0 +1,96 @@
+#section-brand {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid var(--orange);
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 60vh;
+
+    h1 {
+        text-align: center;
+        color: var(--ciano);
+        margin-bottom: auto;
+    }
+}
+
+.brand-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: auto;
+}
+
+.container-card-brand {
+    background-color: var(--whiteF);
+    padding: 4rem 4rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 16rem;
+    min-width: 12rem;
+}
+
+.card-img-brand {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
+    i {
+        font-size: 2.6rem;
+        color: var(--orange);
+    }
+}
+
+.card-info-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 9rem;
+
+    h5 {
+        color: var(--orange);
+        text-align: left;
+        font-family: "InterBold" !important;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        text-align: left;
+        font-size: 1.1rem;
+        color: var(--gray);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #section-brand {
+        
+        
+        
+        
+        
+        width: 90%;
+        min-height: 60vh;
+    
+        h1 {
+            text-align: center;
+            color: var(--ciano);
+            margin-bottom: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1921px) {
+    .brand-container {
+        width: 100%;
+    }
+}

@@ -16,14 +16,14 @@ html {
 }
 
 body {
-  font-family: "InterLight" !important;
+  font-family: "InterLight";
   position: relative;
   width: 100%;
   height: 100vh;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: var(--grayLight);
+  background-color: var(--white);
 }
 
 button {
@@ -61,4 +61,8 @@ a {
   background-color: var(--grayLight);
   width: 100%;
   height: 1px;
+}
+
+.error-message {
+  color: var(--red);
 }/*# sourceMappingURL=general.css.map */

@@ -10,7 +10,10 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/budget/admin', [App\Http\Controllers\BudgetController::class, 'budgetAdmin'])->name('budget.admin')->middleware('verified', 'admin');
+Route::get('/budget/edit/admin/{budget}', [App\Http\Controllers\BudgetController::class, 'budgetEditAdmin'])->name('budget.edit.admin')->middleware('verified', 'admin');
+
 Route::get('/budget', [App\Http\Controllers\BudgetController::class, 'index'])->name('budget')->middleware('verified');
 Route::get('/budget/show/{budget}', [App\Http\Controllers\BudgetController::class, 'show'])->name('budget.show')->middleware('auth')->middleware('verified');
 Route::get('/budget/create', [App\Http\Controllers\BudgetController::class, 'create'])->name('budget.create')->middleware('auth')->middleware('verified');
@@ -19,11 +22,10 @@ Route::get('/budget/edit/{budget}', [App\Http\Controllers\BudgetController::clas
 Route::put('/budget/update/{budget}', [App\Http\Controllers\BudgetController::class, 'update'])->name('budget.update')->middleware('auth')->middleware('verified');
 Route::delete('/budget/destroy/{budget}', [App\Http\Controllers\BudgetController::class, 'destroy'])->name('budget.destroy')->middleware('auth')->middleware('verified');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
-Route::get('/questions', [App\Http\Controllers\HomeController::class, 'questions'])->name('questions');
+Route::get('/service/{type}', [App\Http\Controllers\HomeController::class, 'service'])->name('about');
 
+Route::post('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('test');
 
-/*Route::get('/mensagem-teste', function() {
-    //return new MensagemMail();
-    Mail::to('amani.sena955@gmail.com')->send(new MensagemMail());
-    return 'Email enviado!';
-});*/
+Route::get('/access-denied', function() {
+    return view('access-denied');
+});

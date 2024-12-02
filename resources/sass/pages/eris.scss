@@ -1,0 +1,36 @@
+#section-eris {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.eris-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    img {
+        width: 12rem;
+    }
+
+    h3:nth-child(2) {
+        margin-top: 1rem;
+        margin-bottom: -0.8rem;
+        color: var(--orange);
+    }
+    
+    h3:nth-child(3) {
+        color: var(--ciano);
+    }
+
+    h3 {
+        font-family: 'InterBold' !important;
+        margin: 0;
+    }
+
+}

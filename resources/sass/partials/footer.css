@@ -1,36 +1,95 @@
 #footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  border-top: 4px solid var(--orange);
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  padding: 1rem 0;
-}
-.footer-container img {
-  width: 6rem;
-}
-
-.footer-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  border-top: 2px solid var(--orange);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   gap: 2rem;
 }
-.footer-icons i {
-  font-size: 1.8rem;
+
+.footer-social-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}
+.footer-logo img {
+  width: 6.2rem;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer-social i {
   color: var(--orange);
+  font-size: 2rem;
   transition: 0.3s;
 }
-.footer-icons i:hover {
+.footer-social i:hover {
   transform: scale(1.1);
+}
+
+.footer-info-pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.footer-info p, .footer-info a {
+  color: var(--gray);
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.footer-info a:hover {
+  color: var(--orange);
+}
+
+.footer-pages {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer-pages a {
+  color: var(--gray);
+  transition: 0.3s;
+}
+.footer-pages a:hover {
+  color: var(--orange);
+}
+
+@media screen and (max-width: 900px) {
+  .footer-social {
+    gap: 1rem;
+  }
+  .footer-social i {
+    font-size: 1.8rem;
+  }
+  .footer-pages {
+    display: none;
+  }
 }/*# sourceMappingURL=footer.css.map */
