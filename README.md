@@ -1,9 +1,5 @@
 # Eris
-
-Eris é um site desenvolvido para simplificar o processo de agendamento de visitas de profissionais especializados, oferecendo um sistema completo para cadastro e agendamentos. O objetivo é facilitar e desburocratizar a interação entre clientes e profissionais da área elétrica.
-
----
-
+![eris-img](https://github.com/user-attachments/assets/d3fafdc1-1dc7-4069-ae6a-40f313df0da4)
 ## Visão Geral do Projeto
 
 **Nome do Projeto:** Eris
