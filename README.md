@@ -60,5 +60,3 @@
      ```bash
      npm run dev
      ```
-
----
