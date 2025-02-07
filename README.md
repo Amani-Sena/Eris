@@ -1,6 +1,11 @@
 # [Eris](https://eris.amanidev.com)
-![eris-img](https://github.com/user-attachments/assets/d3fafdc1-1dc7-4069-ae6a-40f313df0da4)
+
+![eris banner](https://github.com/user-attachments/assets/fc1114ff-c8d9-4891-bf49-36469ecc144b)
+
+
 ## Visão Geral do Projeto
+
+![eris-img](https://github.com/user-attachments/assets/d3fafdc1-1dc7-4069-ae6a-40f313df0da4)
 
 **Nome do Projeto:** Eris
 
